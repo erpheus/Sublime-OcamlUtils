@@ -6,7 +6,7 @@ class OcamlTypesParser():
 		try:
 			f = open(filename.rsplit( ".", 1 )[ 0 ]+".annot")
 		except IOError:
-			return "Couldn't open .annot file. Remember compiling with -dtypes"
+			return "Couldn't open .annot file. Remember compiling with -annot"
 		lineM = re.compile('^\\\"[^\\\"]*\\\"\s\d+\s\d+\s(\d+)\s\\\"[^\\\"]*\\\"\s\d+\s\d+\s(\d+)$');
 		endM = re.compile('^\\)$')
 		typeDescr = "Not found"
